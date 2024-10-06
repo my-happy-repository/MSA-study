@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/1-spring-init" />
+        <option name="gradleJvm" value="11 (2)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/1-spring-init" />
+            <option value="$PROJECT_DIR$/1-spring-init/microservices" />
+            <option value="$PROJECT_DIR$/1-spring-init/microservices/product-composite-service" />
+            <option value="$PROJECT_DIR$/1-spring-init/microservices/product-service" />
+            <option value="$PROJECT_DIR$/1-spring-init/microservices/recommendation-service" />
+            <option value="$PROJECT_DIR$/1-spring-init/microservices/review-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2-basic-rest-services" />
+        <option name="gradleJvm" value="11 (2)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/2-basic-rest-services" />
+            <option value="$PROJECT_DIR$/2-basic-rest-services/api" />
+            <option value="$PROJECT_DIR$/2-basic-rest-services/microservices" />
+            <option value="$PROJECT_DIR$/2-basic-rest-services/microservices/product-composite-service" />
+            <option value="$PROJECT_DIR$/2-basic-rest-services/microservices/product-service" />
+            <option value="$PROJECT_DIR$/2-basic-rest-services/microservices/recommendation-service" />
+            <option value="$PROJECT_DIR$/2-basic-rest-services/microservices/review-service" />
+            <option value="$PROJECT_DIR$/2-basic-rest-services/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
