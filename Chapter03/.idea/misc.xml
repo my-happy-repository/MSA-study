@@ -5,7 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/1-spring-init" />
     <file type="web" url="file://$PROJECT_DIR$/2-basic-rest-services" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

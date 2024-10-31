@@ -1,3 +1,4 @@
+// 하나의 ./gradlew build 명령어로 해당 전체 모듈 빌드가 가능하다.
 include ':microservices:product-service'
 include ':microservices:review-service'
 include ':microservices:recommendation-service'
