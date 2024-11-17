@@ -39,25 +39,25 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
 
     @Autowired
     public ProductCompositeIntegration(
-        RestTemplate restTemplate,
-        ObjectMapper mapper,
+            RestTemplate restTemplate,
+            ObjectMapper mapper,
 
-        @Value("${app.product-service.host}") String productServiceHost,
-        @Value("${app.product-service.port}") int    productServicePort,
+            @Value("${app.product-service.host}") String productServiceHost,
+            @Value("${app.product-service.port}") int productServicePort,
 
-        @Value("${app.recommendation-service.host}") String recommendationServiceHost,
-        @Value("${app.recommendation-service.port}") int    recommendationServicePort,
+            @Value("${app.recommendation-service.host}") String recommendationServiceHost,
+            @Value("${app.recommendation-service.port}") int recommendationServicePort,
 
-        @Value("${app.review-service.host}") String reviewServiceHost,
-        @Value("${app.review-service.port}") int    reviewServicePort
+            @Value("${app.review-service.host}") String reviewServiceHost,
+            @Value("${app.review-service.port}") int reviewServicePort
     ) {
 
         this.restTemplate = restTemplate;
         this.mapper = mapper;
 
-        productServiceUrl        = "http://" + productServiceHost + ":" + productServicePort + "/product/";
+        productServiceUrl = "http://" + productServiceHost + ":" + productServicePort + "/product/";
         recommendationServiceUrl = "http://" + recommendationServiceHost + ":" + recommendationServicePort + "/recommendation?productId=";
-        reviewServiceUrl         = "http://" + reviewServiceHost + ":" + reviewServicePort + "/review?productId=";
+        reviewServiceUrl = "http://" + reviewServiceHost + ":" + reviewServicePort + "/review?productId=";
     }
 
     public Product getProduct(int productId) {
@@ -75,16 +75,16 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
 
             switch (ex.getStatusCode()) {
 
-            case NOT_FOUND:
-                throw new NotFoundException(getErrorMessage(ex));
+                case NOT_FOUND:
+                    throw new NotFoundException(getErrorMessage(ex));
 
-            case UNPROCESSABLE_ENTITY :
-                throw new InvalidInputException(getErrorMessage(ex));
+                case UNPROCESSABLE_ENTITY:
+                    throw new InvalidInputException(getErrorMessage(ex));
 
-            default:
-                LOG.warn("Got a unexpected HTTP error: {}, will rethrow it", ex.getStatusCode());
-                LOG.warn("Error body: {}", ex.getResponseBodyAsString());
-                throw ex;
+                default:
+                    LOG.warn("Got a unexpected HTTP error: {}, will rethrow it", ex.getStatusCode());
+                    LOG.warn("Error body: {}", ex.getResponseBodyAsString());
+                    throw ex;
             }
         }
     }
@@ -103,7 +103,8 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
             String url = recommendationServiceUrl + productId;
 
             LOG.debug("Will call getRecommendations API on URL: {}", url);
-            List<Recommendation> recommendations = restTemplate.exchange(url, GET, null, new ParameterizedTypeReference<List<Recommendation>>() {}).getBody();
+            List<Recommendation> recommendations = restTemplate.exchange(url, GET, null, new ParameterizedTypeReference<List<Recommendation>>() {
+            }).getBody();
 
             LOG.debug("Found {} recommendations for a product with id: {}", recommendations.size(), productId);
             return recommendations;
@@ -120,7 +121,8 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
             String url = reviewServiceUrl + productId;
 
             LOG.debug("Will call getReviews API on URL: {}", url);
-            List<Review> reviews = restTemplate.exchange(url, GET, null, new ParameterizedTypeReference<List<Review>>() {}).getBody();
+            List<Review> reviews = restTemplate.exchange(url, GET, null, new ParameterizedTypeReference<List<Review>>() {
+            }).getBody();
 
             LOG.debug("Found {} reviews for a product with id: {}", reviews.size(), productId);
             return reviews;
@@ -131,3 +133,4 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
         }
     }
 }
+

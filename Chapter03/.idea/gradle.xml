@@ -19,8 +19,9 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/2-basic-rest-services" />
-        <option name="gradleJvm" value="11 (2)" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/2-basic-rest-services" />
