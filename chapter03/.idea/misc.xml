@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/api" />
+    <file type="web" url="file://$PROJECT_DIR$/microservices/api" />
+    <file type="web" url="file://$PROJECT_DIR$/microservices/demo" />
+    <file type="web" url="file://$PROJECT_DIR$/microservices/product-composite-service" />
+    <file type="web" url="file://$PROJECT_DIR$/microservices/product-service" />
+    <file type="web" url="file://$PROJECT_DIR$/microservices/recommendation-service" />
+    <file type="web" url="file://$PROJECT_DIR$/microservices/review-service" />
+    <file type="web" url="file://$PROJECT_DIR$/util" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
