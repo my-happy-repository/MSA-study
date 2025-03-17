@@ -23,7 +23,6 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	// TODO : api util project 참조 못하는 에러 해결 필요 !!
 	implementation project(':api')
 	implementation project(':util')
 }
