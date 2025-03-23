@@ -25,6 +25,14 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+bootJar {
+	mainClass = 'se.magnus.microservices.core.product.RecommendationServiceApplication'
+}
+
+tasks.named("jar") {
+	enabled = false
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }

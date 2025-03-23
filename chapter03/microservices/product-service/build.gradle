@@ -27,6 +27,15 @@ dependencies {
 	implementation project(':util')
 }
 
+bootJar {
+	mainClass = 'se.magnus.microservices.core.product.ProductServiceApplication'
+}
+
+tasks.named("jar") {
+	enabled = false
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
