@@ -1,0 +1,75 @@
+# ===================================
+# ✅ OS / Editor / Tool 공통
+# ===================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# macOS
+__MACOSX/
+
+# Windows
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# JetBrains (IntelliJ / Android Studio)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VSCode
+.vscode/
+
+# ===================================
+# ✅ Java / Kotlin / Gradle 공통
+# ===================================
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+target/
+**/target/
+
+# Kotlin 컴파일 결과물
+*.class
+*.jar
+*.war
+*.ear
+kotlinc_output/
+
+# 테스트 결과 / 리포트
+test-results/
+test-output/
+*.exec
+coverage/
+
+# 환경 변수 파일
+.env
+.env.*
+*.env
+
+# 캐시, 백업
+.cache/
+tmp/
+**/.classpath
+**/.project
+**/.settings/
+
+# Node.js (프론트가 포함된 경우)
+node_modules/
+dist/
+
+# Docker
+**/docker-compose.override.yml
+**/docker-compose*.env
+**/.docker/
+
