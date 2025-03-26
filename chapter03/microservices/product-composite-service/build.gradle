@@ -25,6 +25,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testImplementation 'junit:junit:4.13.2'
 }
 
 bootJar {
@@ -35,6 +36,8 @@ tasks.named("jar") {
 	enabled = false
 }
 
-tasks.named('test') {
+tasks.named("test") {
 	useJUnitPlatform()
 }
+
+
