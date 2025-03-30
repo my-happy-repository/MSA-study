@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: product-service
+---
+spring:
+  profiles:
+    active: docker
+server:
+  port: 8080
+
+---
