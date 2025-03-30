@@ -26,7 +26,7 @@ dependencies {
 }
 
 bootJar {
-	mainClass = 'se.magnus.microservices.core.product.RecommendationServiceApplication'
+	mainClass = 'se.magnus.microservices.core.recommendation.RecommendationServiceApplication'
 }
 
 tasks.named("jar") {

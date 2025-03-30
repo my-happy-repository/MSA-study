@@ -29,6 +29,10 @@ bootJar {
 	mainClass = 'se.magnus.microservices.core.review.ReviewServiceApplication'
 }
 
+tasks.named("jar") {
+	enabled = false
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
